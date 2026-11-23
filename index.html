@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thaïs [Last name] | Internal Communications, Orléans Campus</title>
+<meta name="description" content="Why I want to help the Orléans Campus feel like one House: my reading of the role, what I bring and how I would start.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #111;
+    --grey: #5f5f5f;
+    --ivory: #f7f4ee;
+    --line: #dcd6cb;
+    --gold: #9a7b4f;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Inter", system-ui, sans-serif; color: var(--black); background: #fff; line-height: 1.65; font-size: 17px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: 1.1; }
+  h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 16px; }
+  h3 { font-size: 1.5rem; margin-bottom: 8px; }
+  .kicker { font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
+  .lead { color: var(--grey); max-width: 660px; font-size: 1.05rem; }
+  section { padding: 96px 0; border-top: 1px solid var(--line); }
+  section.ivory { background: var(--ivory); }
+
+  header { position: sticky; top: 0; background: rgba(255,255,255,.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); z-index: 5; }
+  .nav { display: flex; justify-content: space-between; align-items: center; height: 62px; }
+  .name { font-family: "Cormorant Garamond", serif; font-size: 1.35rem; font-weight: 600; letter-spacing: .02em; text-decoration: none; color: inherit; }
+  .nav ul { list-style: none; display: flex; gap: 26px; }
+  .nav a { text-decoration: none; color: var(--grey); font-size: .88rem; }
+  .nav a:hover { color: var(--black); }
+
+  .hero { padding: 120px 0 96px; border-top: 0; text-align: center; }
+  .hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); max-width: 860px; margin: 0 auto 26px; }
+  .hero h1 em { font-weight: 500; color: var(--gold); }
+  .hero .lead { margin: 0 auto 40px; }
+  .btn { display: inline-block; padding: 14px 28px; border: 1px solid var(--black); text-decoration: none; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--black); transition: background .2s, color .2s; }
+  .btn:hover, .btn.dark { background: var(--black); color: #fff; }
+  .btn.dark:hover { background: #333; }
+  .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  .reading { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+  blockquote { font-family: "Cormorant Garamond", serif; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.3; font-style: italic; border-left: 2px solid var(--gold); padding-left: 24px; }
+  .signals { list-style: none; }
+  .signals li { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: .97rem; color: var(--grey); }
+  .signals li strong { display: block; color: var(--black); font-weight: 600; margin-bottom: 2px; }
+
+  .matches { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 48px; }
+  .match { background: #fff; padding: 36px 32px; }
+  .match .need { font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+  .match p { color: var(--grey); font-size: .97rem; margin-top: 8px; }
+  .proof { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); font-size: .9rem; }
+  .proof span { color: var(--gold); font-weight: 600; }
+
+  .numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; text-align: center; }
+  .numbers strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 2.8rem; font-weight: 600; line-height: 1; margin-bottom: 8px; }
+  .numbers span { font-size: .88rem; color: var(--grey); }
+
+  .plan { margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: step; }
+  .step { position: relative; padding-top: 28px; border-top: 2px solid var(--black); }
+  .step .when { font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .step h3 { font-size: 1.35rem; }
+  .step ul { list-style: none; margin-top: 10px; }
+  .step li { font-size: .92rem; color: var(--grey); padding: 6px 0; border-bottom: 1px solid var(--line); }
+
+  .ideas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+  .idea { padding: 32px; background: #fff; border: 1px solid var(--line); }
+  .idea p { color: var(--grey); font-size: .95rem; }
+
+  .about { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+  .photo { aspect-ratio: 4 / 5; background: linear-gradient(170deg, #ece6db, #d9d1c3); display: flex; align-items: flex-end; justify-content: center; padding: 20px; color: var(--grey); font-size: .85rem; text-align: center; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about p { color: var(--grey); margin-bottom: 16px; }
+  .about p:first-of-type { color: var(--black); font-size: 1.1rem; }
+
+  .contact { background: var(--black); color: #fff; text-align: center; border-top: 0; }
+  .contact h2 { color: #fff; }
+  .contact .lead { color: #bdbdbd; margin: 0 auto 36px; }
+  .contact .btn { border-color: #fff; color: #fff; }
+  .contact .btn:hover { background: #fff; color: var(--black); }
+  .links { margin-top: 32px; display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; font-size: .9rem; }
+  .links a { color: #bdbdbd; text-decoration: none; }
+  .links a:hover { color: #fff; }
+  footer { background: var(--black); color: #7a7a7a; font-size: .78rem; text-align: center; padding: 0 0 28px; }
+
+  @media (max-width: 860px) {
+    .nav ul { display: none; }
+    .reading, .about { grid-template-columns: 1fr; gap: 40px; }
+    .matches, .ideas { grid-template-columns: 1fr; }
+    .numbers, .plan { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 72px 0; }
+    .hero { padding: 80px 0 64px; }
+  }
+  @media (max-width: 480px) {
+    .numbers, .plan { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="name">Thaïs [Last name]</a>
+    <ul>
+      <li><a href="#reading">The role</a></li>
+      <li><a href="#fit">Why me</a></li>
+      <li><a href="#plan">First months</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Application · Internal Communications Manager · Orléans Campus</p>
+      <h1>Helping 2,500 people feel part of <em>one House</em>.</h1>
+      <p class="lead">I read the offer closely. Below is how I understand the role, what I already do every week that applies to it, and how I would spend my first months on the Campus.</p>
+      <div class="hero-actions">
+        <a href="#fit" class="btn dark">Why I fit</a>
+        <a href="cv-thais.pdf" class="btn" download>Download my CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reading" class="ivory">
+    <div class="wrap reading">
+      <div>
+        <p class="kicker">How I read the role</p>
+        <blockquote>The Orléans Campus needs its people, from lab researchers to line operators, to feel part of the House and work as one site. Today the corporate message is written for Paris and the boutiques, and each activity speaks for itself.</blockquote>
+      </div>
+      <ul class="signals">
+        <li><strong>"Structure and energize"</strong>The Campus is building its communication function now: master plan, budget, team.</li>
+        <li><strong>"Adapt corporate communications"</strong>Messages designed for Paris need a version that makes sense in a lab or on a production line.</li>
+        <li><strong>"Sense of belonging" and "collective pride"</strong>People on an industrial site can feel far from the image of the brand they work for.</li>
+        <li><strong>"Connections between activities"</strong>R&amp;D, production and supply chain rarely see each other's work.</li>
+        <li><strong>"Realities of the various roles"</strong>Many people on site have no desk and no work email, so the usual channels miss them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fit">
+    <div class="wrap">
+      <p class="kicker">Why I'm a good fit</p>
+      <h2>What the Campus needs, and where I've already done it</h2>
+      <p class="lead">My experience is in smaller structures, which meant I built things from nothing and handled every step myself, from strategy to the camera.</p>
+
+      <div class="matches">
+        <div class="match">
+          <p class="need">Giving employees a voice</p>
+          <h3>I put the team in front of the camera</h3>
+          <p>At Tonton Maboule, an artisan ice cream maker with three shops in La Rochelle, I write, film and edit team reels and behind-the-scenes videos. At Biosalines, my performance analyses showed that real people on screen beat polished promotional posts every time.</p>
+          <p class="proof"><span>Proof:</span> team and behind-the-scenes video series, TikTok account launched in 2026.</p>
+        </div>
+        <div class="match">
+          <p class="need">Adapting a brand to a site</p>
+          <h3>I turn an identity into tools people use</h3>
+          <p>Tonton Maboule's brand identity existed only in people's heads. I wrote the brand guidelines and built templates so every shop and every post speaks the same way. That is the same job as making a corporate message work locally.</p>
+          <p class="proof"><span>Proof:</span> brand guidelines, Instagram and Facebook templates, in-store posters for three locations.</p>
+        </div>
+        <div class="match">
+          <p class="need">Connecting R&amp;D to everyone else</p>
+          <h3>I translate science into stories</h3>
+          <p>Biosalines makes organic skincare from marine actives. I built a communication framework for five ingredients (red algae, samphire, brown algae, wakame, golden algae) so that lab knowledge became content anyone could follow. A cosmetics R&amp;D campus has the same need inside its own walls.</p>
+          <p class="proof"><span>Proof:</span> ingredient framework, expertise content for a Victoires de la Beauté 2026 winning product.</p>
+        </div>
+        <div class="match">
+          <p class="need">Structuring, measuring, advising</p>
+          <h3>I build the plan and report on it</h3>
+          <p>For long stretches I worked without a direct manager. I set up the season's communication plan and a Notion editorial calendar, ran campaigns end to end and reported results in numbers, then adjusted. I'm used to being the one person every team comes to.</p>
+          <p class="proof"><span>Proof:</span> 2026 communication plan, 12-action CRM roadmap, regular performance reports.</p>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div><strong>€10k+</strong><span>revenue from the email flows I built at Biosalines</span></div>
+        <div><strong>54%</strong><span>average open rate on those emails</span></div>
+        <div><strong>3 sites</strong><span>covered with one consistent voice at Tonton Maboule</span></div>
+        <div><strong>2 brands</strong><span>managed in parallel, each with its own audience</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan" class="ivory">
+    <div class="wrap">
+      <p class="kicker">How I would start</p>
+      <h2>My first six months on the Campus</h2>
+      <p class="lead">A first draft, written from the outside. The first weeks would be spent checking it against what people on site actually tell me.</p>
+
+      <div class="plan">
+        <div class="step">
+          <p class="when">Weeks 1 to 4</p>
+          <h3>Listen</h3>
+          <ul>
+            <li>Meet each department head</li>
+            <li>Spend time on the lines and in the labs</li>
+            <li>Map every channel that exists today</li>
+            <li>Find out who has no screen access</li>
+          </ul>
+        </div>
+        <div class="step">
+          <p class="when">Weeks 5 to 8</p>
+          <h3>Structure</h3>
+          <ul>
+            <li>Draft the Campus communication master plan</li>
+            <li>Shared editorial calendar for all departments</li>
+            <li>Templates so teams can publish in one style</li>
+            <li>Simple indicators to track reach</li>
+          </ul>
+        </div>
+        <div class="step">
+          <p class="when">Weeks 9 to 12</p>
+          <h3>Launch</h3>
+          <ul>
+            <li>First video portraits of Campus employees</li>
+            <li>Screens and posters in break areas</li>
+            <li>Monthly Campus news adapted from corporate</li>
+            <li>First cross-department event</li>
+          </ul>
+        </div>
+        <div class="step">
+          <p class="when">Months 4 to 6</p>
+          <h3>Measure and adjust</h3>
+          <ul>
+            <li>Short pulse survey on belonging</li>
+            <li>Review what reached the shop floor</li>
+            <li>Budget and plan for the following year</li>
+            <li>Report to Campus management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">Ideas I would bring</p>
+      <h2>A few concrete starting points</h2>
+      <div class="ideas">
+        <div class="idea">
+          <h3>Faces of the Campus</h3>
+          <p>A short monthly video portrait of one person, alternating between a researcher, an operator, a logistician and a support role. Shown on site screens and on the intranet, so each activity sees the others at work.</p>
+        </div>
+        <div class="idea">
+          <h3>From the lab to the boutique</h3>
+          <p>Follow one product from formula to shelf, filmed in each department that touches it. It shows everyone where their work ends up, which is the most direct link to the House I can think of.</p>
+        </div>
+        <div class="idea">
+          <h3>Channels for people without a desk</h3>
+          <p>Posters, screens in break rooms and short videos on mobile, designed for a two-minute break. I already design in-store posters and vertical videos for exactly this kind of short attention.</p>
+        </div>
+        <div class="idea">
+          <h3>A toolkit for departments</h3>
+          <p>Templates, a one-page writing guide and a request form, so departments can share news in the Campus style and come to me for the bigger projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="ivory">
+    <div class="wrap about">
+      <div class="photo">
+        <!-- Replace with: <img src="thais.jpg" alt="Portrait of Thaïs"> -->
+        [Your photo]
+      </div>
+      <div>
+        <p class="kicker">About me</p>
+        <h2>Thaïs</h2>
+        <p>I work in communication on the French Atlantic coast, in two work-study roles: Biosalines, an organic marine skincare brand on the Île de Ré, and Tonton Maboule, an artisan ice cream maker in La Rochelle.</p>
+        <p>I'm completing a European Master's in E-business at ESCEN Bordeaux, specialising in Creative Design, with courses in digital strategy, CRM, omnichannel and sustainable business. I film with my own equipment (Canon R7, Fujifilm X-M5, DJI Osmo Pocket, drone), so a shoot on site never has to wait for an agency.</p>
+        <p>Beauty and skincare have been personal interests for a long time. Working for a House where research and craft sit on the same campus is exactly where I want to grow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="kicker">Contact</p>
+      <h2>I'd be glad to talk about the Campus.</h2>
+      <p class="lead">Available from [Month Year]. Based in France and ready to move to Orléans.</p>
+      <a href="mailto:[your@email.com]" class="btn">Write to me</a>
+      <div class="links">
+        <a href="mailto:[your@email.com]">[your@email.com]</a>
+        <a href="[https://linkedin.com/in/...]" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="[portfolio URL]" target="_blank" rel="noopener">Portfolio</a>
+        <a href="cv-thais.pdf" download>CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Personal application page by Thaïs [Last name]. Not affiliated with Christian Dior.</p>
+</footer>
+
+</body>
+</html>
